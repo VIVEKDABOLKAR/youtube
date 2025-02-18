@@ -25,5 +25,6 @@ router.route("/login").post(upload.none(), loginUser)
 
 //secure browse
 router.route("/logout").post(verifyJWT, logoutUser)
+router.route("/refresh-token").post(upload.none(), refreshAccessToken)
 
 export default router
